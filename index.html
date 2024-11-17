@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>数据分析平台</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>数据分析平台</h1>
+        
+        <div class="upload-section">
+            <input type="file" id="fileInput" accept=".csv,.xlsx,.xls">
+            <button onclick="handleFileUpload()">上传文件</button>
+            <div class="progress-container" id="progressContainer" style="display: none;">
+                <div class="progress-bar" id="progressBar"></div>
+                <div class="progress-text" id="progressText">0%</div>
+            </div>
+        </div>
+
+        <div class="filter-section" id="filterSection">
+            <!-- 筛选控件将在这里动态生成 -->
+        </div>
+
+        <div class="column-controls" id="columnControls">
+            <!-- 列控制复选框将在这里动态生成 -->
+        </div>
+
+        <div class="export-section">
+            <button onclick="exportToExcel()" class="export-btn">导出Excel</button>
+        </div>
+
+        <div class="table-container" id="tableContainer">
+            <!-- 数据表格将在这里显示 -->
+        </div>
+
+        <div class="pagination" id="pagination">
+            <!-- 分页控件将在这里显示 -->
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
